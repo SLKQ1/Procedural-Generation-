@@ -25,7 +25,10 @@ public class Noise
             for (int x = 0; x < mapWidth; x++)
             {
                 float sampleX = x / scale;
-                float sampleY = y / scale; 
+                float sampleY = y / scale;
+                // getting and setting perlin noise value in map 
+                float perlinValue = Mathf.PerlinNoise(sampleX, sampleY);
+                noiseMap[x, y] = perlinValue; 
             }
         }
         return noiseMap; 
