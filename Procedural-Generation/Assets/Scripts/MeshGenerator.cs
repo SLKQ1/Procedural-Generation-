@@ -25,7 +25,7 @@ public static class MeshGenerator
                 meshData.uvs[vertexIndex] = new Vector2(x / (float)width, y / (float)height); 
                 if (x < width -1 && y < height - 1)
                 {
-                    meshData.AddTriangle(vertexIndex, vertexIndex + width + 1, vertexIndex + 1);
+                    meshData.AddTriangle(vertexIndex, vertexIndex + width + 1, vertexIndex + width);
                     meshData.AddTriangle(vertexIndex + width + 1, vertexIndex, vertexIndex + 1); 
                 }
                 vertexIndex++; 
